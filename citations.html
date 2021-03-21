@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Citations</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/citations.css">
+    <link rel="icon" href="images\icon.png">
+    <script type="text/javascript">
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      "Current Time - " + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <p id="time"></p>
+    <h1 id="title">All About DIA</h1>
+    <div class="topnav-container">
+      <div class="topnav">
+        <a href="./">Home</a>
+        <a href="info.html">General Information</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact Information</a>
+        <a href="citations.html" class="active">Citations</a>
+      </div>
+    </div>
+    <div>
+    <p class="content">
+      These are the citations to the images and the logo that have been used throughout the website: <br> <br>
+      “DIA Dubai: Best IB Schools: Dubai: UAE.” Yallaschools.com, www.yallaschools.com/dubai-international-academy-175.html. <br> <br>
+      “Dubai International Academy Review.” RSS, whichschooladvisor.com/uae/school-review/dubai-international-academy. <br> <br>
+      “Dubai International Academy.” Wikipedia, Wikimedia Foundation, 26 Dec. 2020, en.wikipedia.org/wiki/Dubai_International_Academy.
+    </p>
+  </div>
+  </body>
+</html>

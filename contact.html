@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images\icon.png">
+    <script type="text/javascript">
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      "Current Time - " + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <p id="time"></p>
+    <h1 id="title">All About DIA</h1>
+    <div class="topnav-container">
+      <div class="topnav">
+        <a href="./">Home</a>
+        <a href="info.html">General Information</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html" class="active">Contact Information</a>
+        <a href="citations.html">Citations</a>
+      </div>
+    </div>
+    <div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevVhS4bdSSyGAKeeVTBfIwsNm_MtwMBMnVKX53MGJs5xj9mA/viewform?embedded=true" width="640" height="955" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+  </body>
+</html>

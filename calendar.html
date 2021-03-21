@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css\calendar.css">
+    <link rel="icon" href="images\icon.png">
+    <script type="text/javascript">
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      "Current Time - " + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <p id="time"></p>
+    <h1 id="title">All About DIA</h1>
+    <div class="topnav-container">
+      <div class="topnav">
+        <a href="./">Home</a>
+        <a href="info.html">General Information</a>
+        <a href="calendar.html" class="active">Calendar</a>
+        <a href="contact.html">Contact Information</a>
+        <a href="citations.html">Citations</a>
+      </div>
+    </div>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FDubai&amp;src=amFjb2JtYXRoZXc0NDZAZ21haWwuY29t&amp;src=YjZ2Zm1vOG1hdHRrOHZjcWRwMWEyaHA4NGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </body>
+</html>

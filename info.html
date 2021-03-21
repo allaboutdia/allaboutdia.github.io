@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>General Information</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="icon" href="images/icon">
+    <script type="text/javascript">
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      "Current Time - " + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <p id="time"></p>
+    <h1 id="title">General Information</h1>
+    <div class="topnav-container">
+      <div class="topnav">
+        <a href="./">Home</a>
+        <a href="info.html" class="active">General Information</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact Information</a>
+        <a href="citations.html">Citations</a>
+      </div>
+     </div>
+     <div class="content">
+       Within the school, there are many places where the students hang out. Of these,
+       there are a few notable areas. The first is the Quad, a rectangle shaped piece grass near the entrance.
+       Another is the Learning Garden, the Cafeteria, or within the hallways in the school. If you go near these
+       areas you are sure to find more people.
+       <br> <br>
+       There are a variety of clubs and extracurricular activites at our school as well.
+       There are many students who are active within these clubs and it will be easy
+       to meet new people through these clubs.
+       The one club that would be recommended to meet new people would be Model United Nations.
+       There are many people in the club, and it also helps build your communication skills.
+       <br> <br>
+     </div>
+     <img class="image" src="images/image2.jpg" alt="Picture of Dubai International Academy">
+   </body>
+</html>

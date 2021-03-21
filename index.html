@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All About DIA</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images\icon.png">
+    <script type="text/javascript">
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      "Current Time - " + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
+  </head>
+  <body onload="startTime()">
+    <p id="time"></p>
+    <h1 id="title">All About DIA</h1>
+    <div class="topnav-container">
+      <div class="topnav">
+        <a href="./" class="active">Home</a>
+        <a href="info.html">General Information</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact Information</a>
+        <a href="citations.html">Citations</a>
+      </div>
+    </div>
+    <div>
+    <p class="content">
+      Dubai International Academy, or DIA for short, is a school in the United Arab
+      Emirates. The school has two different branches, one in Emirates Hills,
+      and another one in Al Barsha. This website will be focused on the first branch,
+      the Emirates Hills branch.
+      <br> <br>
+      The Emirates Hills branch of DIA is the original branch, and has been open since
+      2005. This website will help to introduce you to this school and help you become
+      more familiar with it.
+    </p>
+    <img class="image" src="images\image1.jpeg" alt="Image of Dubai International Academy">
+  </div>
+  </body>
+</html>
